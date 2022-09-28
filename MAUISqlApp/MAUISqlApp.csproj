@@ -48,10 +48,9 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
-	 
-
-	 
-
+	<ItemGroup>
+	  <None Remove="Platforms\Android\Resources\raw\razvoj1.cer" />
+	</ItemGroup>
 	 
 
 	<ItemGroup>

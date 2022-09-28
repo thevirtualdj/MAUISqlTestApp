@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.Common;
 using Microsoft.Data.SqlClient;
+ 
 
 namespace MAUISqlApp
 {
@@ -11,8 +12,8 @@ namespace MAUISqlApp
         {
             //WORKS JUST FINE ON SAME SERVER THAT FORCES ENCRYPTION WHEN RUN ON WINDOWS
             //string connectionString = @"Server=YOURSERVER;Database=YOUR_DBHERE;User Id=sa;Password=YOUR_PASSWORD_HERE;integrated security=True;Encrypt=False;TrustServerCertificate=True;MultiSubnetFailover=true";
-            string connectionString = @"Server=192.168.0.15,1433;Database=INSERTYOURDBHERE;User Id=sa;Password=INSERTYOURPASSWORDHERE;integrated security=True;Encrypt=False;TrustServerCertificate=True;MultiSubnetFailover=true";
-            string sql = "select @@version";
+            string connectionString = @"Server=192.168.0.15,1433;Database=YOURDB;User Id=sa;Password=YOURPASS;Persist Security Info=True;Encrypt=True;TrustServerCertificate=True";
+            string sql = "SELECT RAND()";
             string ret = "";
             SqlConnection Connection = new SqlConnection(connectionString);
             
