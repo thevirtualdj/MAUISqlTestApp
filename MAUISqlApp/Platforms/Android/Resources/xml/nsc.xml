@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+	<base-config cleartextTrafficPermitted="true">
+		<trust-anchors>
+			<certificates src="system" />
+			<certificates src="user" />
+			<!--<certificates src="@raw/razvoj1"/>-->
+		</trust-anchors>
+	</base-config>
+    <domain-config cleartextTrafficPermitted="true">
+		<domain includeSubdomains="false">localhost</domain>
+		<domain includeSubdomains="false">192.168.0.15,1433</domain>
+		<domain includeSubdomains="false">192.168.0.15</domain>
+        <domain includeSubdomains="true">RAZVOJ1</domain>
+		<domain includeSubdomains="true">RAZVOJ1.localhost</domain>
+		<trust-anchors>
+			<certificates src="system" />
+			<certificates src="user" />
+		</trust-anchors>
+    </domain-config>
+</network-security-config>
